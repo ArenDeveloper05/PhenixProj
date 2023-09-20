@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+/server/vendor
+/server/composer.json
+/server/composer.lock
+/server/.env
 
 # testing
 /coverage
