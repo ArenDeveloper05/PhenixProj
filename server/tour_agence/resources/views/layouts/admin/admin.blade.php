@@ -24,12 +24,18 @@
     <link rel="stylesheet" href="/admin/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="/admin/plugins/summernote/summernote-bs4.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
+@include('components.admin.navigate')
+@include('components.admin.aside')
 <div class="wrapper">
-    @include('components.navigate')
-
-    <!-- jQuery -->
+    @yield('content')
+</div>
+<!-- jQuery -->
     <script src="/admin/plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="/admin/plugins/jquery-ui/jquery-ui.min.js"></script>

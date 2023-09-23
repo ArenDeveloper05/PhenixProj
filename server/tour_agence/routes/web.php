@@ -1,7 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +15,40 @@ use App\Http\Controllers\Admin\AdminController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Get Home Page
+Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/admin_panel', [AdminController::class, "index"])->middleware(['role:admin']);
+
+// Get Group Middleware is Admin Panel
+Route::middleware('role:admin')->prefix('admin_panel')->group( function (){
+
+//    Get Admin Panel URI
+    Route::get('/', [AdminController::class, "index"]);
+
+//    Get Users in Table
+    Route::get('/users', [AdminController::class, "get_users"]);
+
+//    Get Number of Registered Users and Hotels
+    Route::get('/', [AdminController::class, "count_registered"]);
+
+//  Get List Hotels
+    Route::get('/list_hotels', [AdminController::class, "list_hotels"]);
+
+//    Get Hotel Form
+    Route::get('/create_hotels', [AdminController::class, "hotel_form"])->name('form_data');
+
+//    Post Hotel Create
+    Route::post('/create_hotels/create', [AdminController::class, "create_hotels"]);
+
+//    Get Images list
+    Route::get('/images/{images}', [AdminController::class, "get_image"])->name('image.show');
+
+//    Delete Hotels is Database
+
+    Route::match(['get', 'delete'], 'list_hotels/{id}', [AdminController::class, "delete_hotels"])->name('hotels.delete');
+
+});
+
+
