@@ -5,4 +5,7 @@
 }
 :root {
   --global-max-width: 1200px;
+  --header-color: #ffcc04;
+  --nav-hover-color: #ba970b;
+  --transition--normal--speed: 0.25s;
 }
