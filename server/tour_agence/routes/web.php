@@ -24,31 +24,35 @@ Route::get('/', [HomeController::class, 'index']);
 // Get Group Middleware is Admin Panel
 Route::middleware('role:admin')->prefix('admin_panel')->group( function (){
 
+//    Create group controller AdminController
+    Route::controller(AdminController::class)->group(function (){
+
 //    Get Admin Panel URI
-    Route::get('/', [AdminController::class, "index"]);
+        Route::get('/',  "index");
 
 //    Get Users in Table
-    Route::get('/users', [AdminController::class, "get_users"]);
+        Route::get('/users',  "get_users");
 
 //    Get Number of Registered Users and Hotels
-    Route::get('/', [AdminController::class, "count_registered"]);
+        Route::get('/',  "count_registered");
 
 //  Get List Hotels
-    Route::get('/list_hotels', [AdminController::class, "list_hotels"]);
+        Route::get('/list_hotels',  "list_hotels");
 
 //    Get Hotel Form
-    Route::get('/create_hotels', [AdminController::class, "hotel_form"])->name('form_data');
+        Route::get('/create_hotels',  "hotel_form")->name('form_data');
 
 //    Post Hotel Create
-    Route::post('/create_hotels/create', [AdminController::class, "create_hotels"]);
+        Route::post('/create_hotels/create',  "create_hotels");
 
 //    Get Images list
-    Route::get('/images/{images}', [AdminController::class, "get_image"])->name('image.show');
+        Route::get('/images/{images}',  "get_image")->name('image.show');
 
 //    Delete Hotels is Database
 
-    Route::match(['get', 'delete'], 'list_hotels/{id}', [AdminController::class, "delete_hotels"])->name('hotels.delete');
+        Route::match(['get', 'delete'], 'list_hotels/{id}',  "delete_hotels")->name('hotels.delete');
 
+    });
 });
 
 
