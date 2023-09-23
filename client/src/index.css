@@ -1,5 +1,11 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+:root {
+  --global-max-width: 1200px;
+  --header-color: #ffcc04;
+  --nav-hover-color: #ba970b;
+  --transition--normal--speed: 0.25s;
 }

@@ -1,9 +1,12 @@
 import "./App.css";
+import AppRoutes from "./router/AppRoutes";
 
 function App() {
-  return <div className="App">
-    <h1>Client side for Phenix Corporation project.</h1>
-  </div>;
+  return (
+    <div className="App">
+      <AppRoutes />
+    </div>
+  );
 }
 
 export default App;
