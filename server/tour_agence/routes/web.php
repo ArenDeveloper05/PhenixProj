@@ -49,7 +49,6 @@ Route::middleware('role:admin')->prefix('admin_panel')->group( function (){
         Route::get('/images/{images}',  "get_image")->name('image.show');
 
 //    Delete Hotels is Database
-
         Route::match(['get', 'delete'], 'list_hotels/{id}',  "delete_hotels")->name('hotels.delete');
 
     });
