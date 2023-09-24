@@ -5,7 +5,16 @@
 }
 :root {
   --global-max-width: 1200px;
-  --header-color: #ffcc04;
+  --header-color: rgb(255, 238, 199);
   --nav-hover-color: #ba970b;
   --transition--normal--speed: 0.25s;
 }
+
+/* ::-webkit-scrollbar{
+  background-color: rgba(255,219,169,1);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgba(140,94,68,1);
+  border-radius: 2px;
+} */

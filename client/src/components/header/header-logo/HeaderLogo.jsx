@@ -1,5 +1,5 @@
 const HeaderLogo = () => {
-  return <div>HeaderLogo</div>;
+  return <div className="headerLogo">HeaderLogo</div>;
 };
 
 export default HeaderLogo;
