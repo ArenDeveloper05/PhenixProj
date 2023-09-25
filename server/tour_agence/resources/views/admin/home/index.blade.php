@@ -629,6 +629,14 @@
                     <!-- right col -->
                 </div>
                 <!-- /.row (main row) -->
+                <div class="container">
+                    <footer class="main-footer" style="text-align: center">
+                        <strong>Copyright &copy; 2014-<script>document.write(new Date().getFullYear())</script> <a href="/admin_panel">Admin Panel</a>.</strong>
+                        All rights reserved.
+                        <div class="float-right d-none d-sm-inline-block">
+                        </div>
+                    </footer>
+                </div>
             </div><!-- /.container-fluid -->
         </section>
         <!-- /.content -->
