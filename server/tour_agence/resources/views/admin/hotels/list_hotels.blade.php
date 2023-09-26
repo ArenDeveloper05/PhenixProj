@@ -47,11 +47,11 @@
             </tr>
             @endif
     </div>
-    <footer class="main-footer">
-        <strong>Copyright &copy; 2014-2023 <a href="https://adminlte.io">Admin Panel</a>.</strong>
-        All rights reserved.
-        <div class="float-right d-none d-sm-inline-block">
-        </div>
-    </footer>
+        <footer class="main-footer text-center">
+            <strong>Copyright &copy; 2014-<script>document.write(new Date().getFullYear())</script> <a href="/">Admin Panel</a>.</strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+            </div>
+        </footer>
 @endsection
 
