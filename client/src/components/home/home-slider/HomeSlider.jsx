@@ -13,8 +13,9 @@ import "./HomeSlider.css"
 
 const HomeSlider = () => {
   return (
-    <div className='homeSlider'>
+    <div className="homeSlider">
         <Swiper
+            className="homeSliderSwiper"
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCoverflow, EffectFade]}
             spaceBetween={0}
             slidesPerView={1}
@@ -29,38 +30,38 @@ const HomeSlider = () => {
             navigation
             pagination={{ clickable: true }}
             // scrollbar={{ draggable: false }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}
+            // onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log('slide change')}
             >
-            <SwiperSlide className="swiperSlide1">
+            <SwiperSlide className="homeSliderSwiperSlide homeSliderSwiperSlide1">
                 <p className="swiperSlideTitleTop">WE LIKE TO</p>
                 <p className="swiperSlideTitleBottom">go AROUND</p>
             </SwiperSlide>
-            <SwiperSlide className="swiperSlide2">
+            <SwiperSlide className="homeSliderSwiperSlide homeSliderSwiperSlide2">
                 <p className="swiperSlideTitleTop">WE LIKE TO</p>
                 <p className="swiperSlideTitleBottom">go AROUND</p>
             </SwiperSlide>
-            <SwiperSlide className="swiperSlide3">
+            <SwiperSlide className="homeSliderSwiperSlide homeSliderSwiperSlide3">
                 <p className="swiperSlideTitleTop">WE LIKE TO</p>
                 <p className="swiperSlideTitleBottom">go AROUND</p>
             </SwiperSlide>
-            <SwiperSlide className="swiperSlide4">
+            <SwiperSlide className="homeSliderSwiperSlide homeSliderSwiperSlide4">
                 <p className="swiperSlideTitleTop">WE LIKE TO</p>
                 <p className="swiperSlideTitleBottom">go AROUND</p>
             </SwiperSlide>
-            <SwiperSlide className="swiperSlide5">
+            <SwiperSlide className="homeSliderSwiperSlide homeSliderSwiperSlide5">
                 <p className="swiperSlideTitleTop">WE LIKE TO</p>
                 <p className="swiperSlideTitleBottom">go AROUND</p>
             </SwiperSlide>
-            <SwiperSlide className="swiperSlide6">
+            <SwiperSlide className="homeSliderSwiperSlide homeSliderSwiperSlide6">
                 <p className="swiperSlideTitleTop">WE LIKE TO</p>
                 <p className="swiperSlideTitleBottom">go AROUND</p>
             </SwiperSlide>
-            <SwiperSlide className="swiperSlide7">
+            <SwiperSlide className="homeSliderSwiperSlide homeSliderSwiperSlide7">
                 <p className="swiperSlideTitleTop">WE LIKE TO</p>
                 <p className="swiperSlideTitleBottom">go AROUND</p>
             </SwiperSlide>
-            <SwiperSlide className="swiperSlide8">
+            <SwiperSlide className="homeSliderSwiperSlide homeSliderSwiperSlide8">
                 <p className="swiperSlideTitleTop">WE LIKE TO</p>
                 <p className="swiperSlideTitleBottom">go AROUND</p>
             </SwiperSlide>

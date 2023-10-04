@@ -1,16 +1,16 @@
 .homeSlider{
     width: 100%;
-    height: 670px;
+    height: 675px;
     margin-top: 65px;
     /* border: 1px solid red; */
 }
 
-.swiper{
+.homeSliderSwiper{
     width: 100%;
     height: 100%;
 }
 
-.swiper-slide{
+.homeSliderSwiperSlide{
     background-position: center;
     background-size: cover;
     filter: saturate(70%);
@@ -21,35 +21,35 @@
     gap: 15px;
 }
 
-.swiperSlide1{
+.homeSliderSwiperSlide1{
     background-image: url(../../../assets/sliderImg1.jpg);
 }
 
-.swiperSlide2{
+.homeSliderSwiperSlide2{
     background-image: url(../../../assets/sliderImg2.jpg);
 }
 
-.swiperSlide3{
+.homeSliderSwiperSlide3{
     background-image: url(../../../assets/sliderImg3.jpg);
 }
 
-.swiperSlide4{
+.homeSliderSwiperSlide4{
     background-image: url(../../../assets/sliderImg4.jpg);
 }
 
-.swiperSlide5{
+.homeSliderSwiperSlide5{
     background-image: url(../../../assets/sliderImg5.jpg);
 }
 
-.swiperSlide6{
+.homeSliderSwiperSlide6{
     background-image: url(../../../assets/sliderImg6.jpg);
 }
 
-.swiperSlide7{
+.homeSliderSwiperSlide7{
     background-image: url(../../../assets/sliderImg7.jpg);
 }
 
-.swiperSlide8{
+.homeSliderSwiperSlide8{
     background-image: url(../../../assets/sliderImg8.jpg);
 }
 
