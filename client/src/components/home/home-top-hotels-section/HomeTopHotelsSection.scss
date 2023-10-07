@@ -2,13 +2,17 @@
   width: 100%;
   height: auto;
   // border: 1px solid red;
-  background-color: #eeeeee;
-  padding: 25px 50px;
+  background: radial-gradient(
+    circle,
+    rgba(166, 189, 186, 0.4459033613445378) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  padding: 50px 0px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 25px;
+  gap: 50px;
 
   &-title {
     font-family: "Playfair Display", serif;
@@ -21,7 +25,7 @@
   }
 
   &-container {
-    width: 100%;
+    width: var(--global-max-width);
     border: inherit;
     display: flex;
     // justify-content: space-between;
@@ -31,7 +35,7 @@
 
     &-item {
       width: 50%;
-      height: 580px;
+      height: 520px;
       // border: 1px solid red;
       display: flex;
       justify-content: center;
@@ -39,19 +43,27 @@
       position: relative;
 
       &-logo {
-        width: 150px;
-        height: 120px;
+        width: 100px;
+        height: 80px;
         border: inherit;
         background-color: #ffffff8c;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 5px;
+        border-radius: 10px;
         box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.085);
         position: absolute;
         z-index: 1;
         top: 0;
         left: 0;
+
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.51);
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
 
         & > img {
           width: 100%;
@@ -60,26 +72,32 @@
       }
 
       &-images {
-        width: 90%;
-        height: 500px;
+        width: 85%;
+        height: 450px;
         border: inherit;
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.085);
-        border-radius: 5px;
+        position: relative;
+        background-color: #eee;
+        padding: 10px;
+        box-shadow: 0px 0px 10px 1px rgba(8, 32, 58, 0.274);
+        border-radius: 10px;
         z-index: 0;
+        transition: 0.3s;
+        overflow: hidden;
 
         &-swiper {
           width: 100%;
           height: 100%;
+          border-radius: 10px;
 
           &-swiperSlide {
             width: 100%;
             height: 100%;
+            border-radius: 10px;
 
             & > img {
               width: 100%;
               height: 100%;
+              border-radius: 10px;
             }
           }
 
@@ -90,25 +108,56 @@
             background-color: #fff;
           }
         }
+
+        &::before {
+          content: "";
+          width: 40%;
+          height: 300%;
+          background-color: #ebebeb1b;
+          position: absolute;
+          z-index: 2;
+          bottom: -100%;
+          left: 150%;
+          transform: rotate(-45deg);
+          transition: 0.7s;
+          // transform: translateY(-50%);
+        }
+
+        &:hover {
+          transform: translateY(-20px);
+        }
+
+        &:hover::before {
+          left: -100%;
+        }
       }
 
       &-info {
-        width: 50%;
+        width: 45%;
         height: 150px;
         border: inherit;
         background-color: #ffffffcf;
         padding: 20px;
         box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.085);
-        border-radius: 5px;
+        border-radius: 10px;
         position: absolute;
         z-index: 1;
         left: 0;
         bottom: 0;
         overflow-y: scroll;
 
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.51);
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
         &::-webkit-scrollbar {
-          width: 5px;
+          width: 7px;
           background-color: #948d8d57;
+          border-radius: 10px;
         }
 
         &::-webkit-scrollbar-thumb {
@@ -125,25 +174,80 @@
       }
 
       &-price {
-        width: 180px;
-        height: 80px;
+        width: 150px;
+        height: 75px;
         border: inherit;
         background-color: #ffffffcf;
         padding: 20px;
         box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.085);
-        border-radius: 5px;
+        border-radius: 10px;
         position: absolute;
         z-index: 1;
         right: 80px;
         bottom: 20px;
+        text-decoration: line-through;
+
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.51);
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
+        & > p {
+          text-decoration: line-through;
+        }
       }
     }
   }
 
   &-viewButton {
-    width: 150px;
+    width: 170px;
     height: 50px;
-    border: 1px solid green;
-    background-color: rgb(155, 147, 147);
+    // border: 1px solid rgba(29, 53, 39, 0.403);
+    border: none;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.085);
+    border-radius: 8px;
+    position: relative;
+    font-family: "Teko", sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #000;
+    text-transform: uppercase;
+
+    &::after {
+      content: "view all";
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      opacity: 0.2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: rgba(104, 158, 137, 0.423);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      clip-path: polygon(100% 0, 100% 0, 100% 100%, 87% 100%);
+      transition: 0.5s;
+      font-family: "Teko", sans-serif;
+      font-size: 15px;
+      line-height: 30px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    &:hover::after {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      background-color: rgba(104, 158, 137, 0.423);
+      opacity: 1;
+    }
   }
 }

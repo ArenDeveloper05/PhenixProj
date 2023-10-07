@@ -1,9 +1,9 @@
 import "./HomeTopHotelsSection.scss";
 
-import img1 from "../../../assets/top1.webp";
-import img2 from "../../../assets/top2.webp";
-import img3 from "../../../assets/top3.webp";
-import img4 from "../../../assets/top4.webp";
+import img1 from "../../../assets/top1.jpg";
+import img2 from "../../../assets/top2.jpg";
+import img3 from "../../../assets/top3.jpg";
+import img4 from "../../../assets/top4.jpg";
 import logo1 from "../../../assets/homePartnersSliderLogo3.png";
 import { useState } from "react";
 import SingleTopHotel from "./single-top-hotel/SingleTopHotel";
