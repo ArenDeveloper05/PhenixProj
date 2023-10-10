@@ -34,10 +34,87 @@
     position: absolute;
     padding: 20px;
 
-    &-img {
-      height: 100%;
+    & > img {
+      height: 75%;
       position: absolute;
       right: 0;
+    }
+
+    &-container {
+      width: 50%;
+      height: 90%;
+      // background-color: red;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+      position: absolute;
+      z-index: 1;
+
+      & > h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: 35px;
+        letter-spacing: 1px;
+      }
+
+      & > p {
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        line-height: 25px;
+      }
+
+      & > form {
+        & > button {
+          width: 170px;
+          height: 50px;
+          // border: 1px solid rgba(29, 53, 39, 0.403);
+          border: none;
+          background-color: #fff;
+          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.085);
+          border-radius: 8px;
+          position: relative;
+          font-family: "Poppins", sans-serif;
+          font-size: 15px;
+          line-height: 30px;
+          font-weight: 400;
+          letter-spacing: 0.1em;
+          color: #000;
+          text-transform: uppercase;
+          margin-top: 50px;
+
+          &::after {
+            content: "READ MORE";
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            opacity: 0.2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background-color: rgba(104, 158, 137, 0.423);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            clip-path: polygon(100% 0, 100% 0, 100% 100%, 87% 100%);
+            transition: 0.5s;
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+            line-height: 30px;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            color: #fff;
+            text-transform: uppercase;
+          }
+
+          &:hover::after {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            background-color: rgba(104, 158, 137, 0.423);
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 }
