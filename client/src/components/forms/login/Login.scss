@@ -1,0 +1,44 @@
+.login {
+  font-family: Author;
+  border: solid;
+  padding-top: 200px;
+  > form {
+    border: solid red;
+    margin: auto;
+    width: 80%;
+    .form-row {
+      border: solid;
+      min-height: 110px;
+      > input {
+        width: 100%;
+        border: none;
+        outline: none;
+        box-shadow: 2px 2px 8px grey;
+        height: 75px;
+        transform: skew(-20deg);
+        font-size: 20px;
+        padding: 0 24px;
+        position: relative;
+        transition: 0.25s;
+        &:focus {
+          background-color: #f3e2d4;
+        }
+      }
+
+      > div {
+        font-size: 22px;
+        color: red;
+      }
+    }
+    > button {
+      display: block;
+      padding: 15px 45px;
+      cursor: pointer;
+      font-size: 20px;
+      margin-left: auto;
+      border-radius: 10px;
+      border: none;
+      font-family: Author;
+    }
+  }
+}

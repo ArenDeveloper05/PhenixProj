@@ -1,0 +1,37 @@
+@font-face {
+  font-family: Author;
+  src: url(../../assets/fonts/AutourOne-Regular.ttf);
+}
+
+.formLayout {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  &-image {
+    width: 50%;
+    height: 100%;
+    background-image: url(../../assets/reception.jpg);
+    background-size: cover;
+    background-position: bottom;
+    padding-top: 360px;
+    > h1 {
+      font-size: 80px;
+      font-family: Author;
+      color: #c4a893;
+      text-align: center;
+      text-shadow: 4px 5px 0px black;
+      margin-bottom: 220px;
+    }
+    > h2 {
+      font-size: 70px;
+      font-family: Author;
+      text-align: center;
+      color: #3b353594;
+      text-shadow: 3px 2px 0px white;
+    }
+  }
+  &-form {
+    width: 50%;
+    padding: 24px;
+  }
+}
