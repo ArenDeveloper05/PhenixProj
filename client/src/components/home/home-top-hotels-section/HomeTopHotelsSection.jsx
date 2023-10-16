@@ -37,7 +37,7 @@ const HomeTopHotelsSection = () => {
       id: 3,
       images: [img1, img2, img3, img4],
       desc: "lorem",
-      price: "200$",
+      price: "500$",
       logo: logo1,
     },
   ]);

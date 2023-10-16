@@ -39,6 +39,10 @@
       border-radius: 10px;
       border: none;
       font-family: Author;
+      transition: 0.25s;
+    }
+    > button:hover {
+      background-color: aquamarine;
     }
   }
 }
